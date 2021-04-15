@@ -14,7 +14,7 @@ import FoundationNetworking
 typealias Client = SearchClient
 
 /// Client to perform operations on indices.
-@objc public struct SearchClient: Credentials {
+@objcMembers public struct SearchClient: Credentials {
 
   let transport: Transport
   let operationLauncher: OperationLauncher
