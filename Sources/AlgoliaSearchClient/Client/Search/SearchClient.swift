@@ -14,7 +14,7 @@ import FoundationNetworking
 typealias Client = SearchClient
 
 /// Client to perform operations on indices.
-public struct SearchClient: Credentials {
+@objc public struct SearchClient: Credentials {
 
   let transport: Transport
   let operationLauncher: OperationLauncher
@@ -28,7 +28,7 @@ public struct SearchClient: Credentials {
     return transport.apiKey
   }
 
-  @objc public init(appID: ApplicationID, apiKey: APIKey) {
+  public init(appID: ApplicationID, apiKey: APIKey) {
 
     let configuration = SearchConfiguration(applicationID: appID, apiKey: apiKey)
 
